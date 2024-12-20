@@ -39,17 +39,17 @@ tasks.named('test') {
 }
 
 bootJar {
-    enabled = false
+    enabled = true
 }
 
 jar {
-    enabled = true
+    enabled = false
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifact jar
+            artifact bootJar
         }
     }
 }
